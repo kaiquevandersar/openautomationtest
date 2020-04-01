@@ -10,7 +10,7 @@ class Contato
 
 function getContato($conn)
 {
-    $arrayC = "";
+    $arrayC;
 
     $SQL = "
     SELECT *
