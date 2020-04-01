@@ -12,7 +12,7 @@ class Funcionario
 
 function getFunc($conn)
 {
-    $arrayF = "";
+    $arrayF;
 
     $SQL = "
     SELECT nome, sexo,cargo,rg,logradouro,cidade
