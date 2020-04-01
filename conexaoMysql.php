@@ -1,23 +1,19 @@
 <?php
+$config = require 'config.php';
 
-define("HOST", "hostingautomation.database.windows.net");
-define("USER", "kaique@hostingautomation");
-define("PASSWORD", "root.0147");
-define("DATABASE", "hosting");
+define("HOST", config['HOST']);
+define("USER", config['USER']);
+define("PASSWORD", config['PASSWORD']);
+define("DATABASE", config['DATABASE']);
 
 function conectaAoMySQL()
 {
-    $serverName = "hostingautomation.database.windows.net"; // update me
-    $connectionOptions = array(
-        "Database" => "hosting", // update me
-        "Uid" => "kaique@hostingautomation", // update me
-        "PWD" => "root.0147" // update me
-    );
-    //Establishes the connection
-    $conn = sqlsrv_connect($serverName, $connectionOptions);
-    echo ("Reading data from table");
+  $conn = new mysqli(HOST, USER, PASSWORD, DATABASE);
+  if ($conn->connect_error)
+    throw new Exception('Falha na conexão com o MySQL: ' . $conn->connect_error);
 
   return $conn;   
 }
 
 ?>
+
