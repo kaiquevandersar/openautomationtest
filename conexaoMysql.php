@@ -1,5 +1,5 @@
 <?php
-$config = require 'config.php';
+$config = require 'SQL-auth.php';
 
 define("HOST", config['HOST']);
 define("USER", config['USER']);
