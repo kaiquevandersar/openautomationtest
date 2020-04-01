@@ -1,10 +1,10 @@
 <?php
 $config = require 'SQL-auth.php';
 
-define("HOST", config['HOST']);
-define("USER", config['USER']);
-define("PASSWORD", config['PASSWORD']);
-define("DATABASE", config['DATABASE']);
+define("HOST", $config['HOST']);
+define("USER", $config['USER']);
+define("PASSWORD", $config['PASSWORD']);
+define("DATABASE", $config['DATABASE']);
 
 function conectaAoMySQL()
 {
