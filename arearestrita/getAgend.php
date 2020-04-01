@@ -15,7 +15,7 @@ class AgendF
 
 function getAgend($conn)
 {
-    $arrayAF = "";
+    $arrayAF;
 
     $SQL = "
     SELECT F.nome, F.especialidade , A.hora , A.data, P.nome as nomep , P.telefone
